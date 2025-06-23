@@ -1,7 +1,7 @@
 package main
 
 import (
-	datatypes "go_lang/basics"
+	"go_lang/basics/datatypes"
 )
 
 func main() {
