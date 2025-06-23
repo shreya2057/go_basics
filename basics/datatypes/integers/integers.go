@@ -33,4 +33,6 @@ func Integer() {
 	fmt.Println("uint16(16-bit unsigned integer):", uInteger16)
 	fmt.Println("uint32(32-bit unsigned integer):", uInteger32)
 	fmt.Println("uint64(64-bit unsigned integer):", uInteger64)
+
+	fmt.Println()
 }

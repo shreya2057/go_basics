@@ -2,6 +2,8 @@ package datatypes
 
 import (
 	"fmt"
+	complexNumber "go_lang/basics/datatypes/complex"
+	float "go_lang/basics/datatypes/floats"
 	"go_lang/basics/datatypes/integers"
 	"go_lang/utils/headers"
 )
@@ -14,6 +16,8 @@ func DataTypes() {
 }
 
 func basicTypes() {
-	headers.Heading("Basic Types", "2")
+	headers.Heading("Basic Types", "")
 	integers.Integer()
+	float.Float()
+	complexNumber.Complex()
 }
