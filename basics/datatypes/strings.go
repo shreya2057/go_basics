@@ -34,25 +34,109 @@ func String() {
 		fmt.Sprintf("String (%s) Substring (%s)", fullname, "lopicq"),
 		strings.ContainsAny(fullname, "lopicq"),
 	)
-	fmt.Println("string HasPrefix:", strings.HasPrefix(fullname, "Al"))
-	fmt.Println("string HasSuffix:", strings.HasSuffix(fullname, "land"))
-	fmt.Println("string Index:", strings.Index("hello world world", "world"))
-	fmt.Println("string LastIndex:", strings.LastIndex("hello world world", "world"))
-	fmt.Println("string IndexAny:", strings.IndexAny("hello world", "ord"))
-	fmt.Println("string Count:", strings.Count("aaaa", "a"))
-	fmt.Println("string Split:", strings.Split("Orange,Mango", ","))
-	fmt.Println("string SplitN:", strings.SplitN("a,b,c", ",", 4))
-	fmt.Println("string Fields:", strings.Fields("Hello  World new people"))
-	fmt.Println("string Join:", strings.Join([]string{"pen", "pine"}, ","))
-	fmt.Println("string Replace:", strings.Replace("dark_strategy_user", "_", " ", 1))
-	fmt.Println("string ReplaceAll:", strings.ReplaceAll("dark_strategy_user", "_", " "))
-	fmt.Println("string Trim:", strings.Trim("_hello_", ",_"))
-	fmt.Println("string TrimSpace:", strings.TrimSpace(" hello\n"))
-	fmt.Println("string TrimPrefix:", strings.TrimPrefix("__hello_", "_"))
-	fmt.Println("string TrimSuffix:", strings.TrimSuffix("_hello__", "_"))
-	fmt.Println("string TrimLeft:", strings.TrimLeft("__hello_", "_"))
-	fmt.Println("string TrimRight:", strings.TrimRight("_hello__", "_"))
-	fmt.Println("string ToUpper:", strings.ToUpper("hello"))
-	fmt.Println("string ToLower:", strings.ToLower("HELLO"))
-	fmt.Println("string EqualFold:", strings.EqualFold("HELLO", "hello"))
+	utils.FormatOutput(
+		"HasPrefix (strings.HasPrefix())",
+		fmt.Sprintf("String (%s) Prefix (%s)", fullname, "Al"),
+		strings.HasPrefix(fullname, "Al"),
+	)
+	utils.FormatOutput(
+		"HasSuffix (strings.HasSuffix())",
+		fmt.Sprintf("String (%s) Suffix (%s)", fullname, "land"),
+		strings.HasSuffix(fullname, "land"),
+	)
+	utils.FormatOutput(
+		"Index (strings.Index())",
+		`String ("hello world world") Substring ("world")`,
+		strings.Index("hello world world", "world"),
+	)
+	utils.FormatOutput(
+		"LastIndex (strings.LastIndex())",
+		`String ("hello world world") Substring ("world")`,
+		strings.LastIndex("hello world world", "world"),
+	)
+	utils.FormatOutput(
+		"IndexAny (strings.IndexAny())",
+		`String ("hello world") Chars ("ord")`,
+		strings.IndexAny("hello world", "ord"),
+	)
+	utils.FormatOutput(
+		"Count (strings.Count())",
+		`String ("aaaa") Substring ("a")`,
+		strings.Count("aaaa", "a"),
+	)
+	utils.FormatOutput(
+		"Split (strings.Split())",
+		`String ("Orange,Mango") Sep (",")`,
+		strings.Split("Orange,Mango", ","),
+	)
+	utils.FormatOutput(
+		"SplitN (strings.SplitN())",
+		`String ("a,b,c") Sep (",") N (4)`,
+		strings.SplitN("a,b,c", ",", 4),
+	)
+	utils.FormatOutput(
+		"Fields (strings.Fields())",
+		`String ("Hello  World new people")`,
+		strings.Fields("Hello  World new people"),
+	)
+	utils.FormatOutput(
+		"Join (strings.Join())",
+		`Slice (["pen", "pine"]) Sep (",")`,
+		strings.Join([]string{"pen", "pine"}, ","),
+	)
+	utils.FormatOutput(
+		"Replace (strings.Replace())",
+		`String ("dark_strategy_user") Old ("_") New (" ") N (1)`,
+		strings.Replace("dark_strategy_user", "_", " ", 1),
+	)
+	utils.FormatOutput(
+		"ReplaceAll (strings.ReplaceAll())",
+		`String ("dark_strategy_user") Old ("_") New (" ")`,
+		strings.ReplaceAll("dark_strategy_user", "_", " "),
+	)
+	utils.FormatOutput(
+		"Trim (strings.Trim())",
+		`String ("_hello_") Cutset (",_")`,
+		strings.Trim("_hello_", ",_"),
+	)
+	utils.FormatOutput(
+		"TrimSpace (strings.TrimSpace())",
+		`String (" hello\n")`,
+		strings.TrimSpace(" hello\n"),
+	)
+	utils.FormatOutput(
+		"TrimPrefix (strings.TrimPrefix())",
+		`String ("__hello_") Prefix ("_")`,
+		strings.TrimPrefix("__hello_", "_"),
+	)
+	utils.FormatOutput(
+		"TrimSuffix (strings.TrimSuffix())",
+		`String ("_hello__") Suffix ("_")`,
+		strings.TrimSuffix("_hello__", "_"),
+	)
+	utils.FormatOutput(
+		"TrimLeft (strings.TrimLeft())",
+		`String ("__hello_") Cutset ("_")`,
+		strings.TrimLeft("__hello_", "_"),
+	)
+	utils.FormatOutput(
+		"TrimRight (strings.TrimRight())",
+		`String ("_hello__") Cutset ("_")`,
+		strings.TrimRight("_hello__", "_"),
+	)
+	utils.FormatOutput(
+		"ToUpper (strings.ToUpper())",
+		`String ("hello")`,
+		strings.ToUpper("hello"),
+	)
+	utils.FormatOutput(
+		"ToLower (strings.ToLower())",
+		`String ("HELLO")`,
+		strings.ToLower("HELLO"),
+	)
+	utils.FormatOutput(
+		"EqualFold (strings.EqualFold())",
+		`String1 ("HELLO") String2 ("hello")`,
+		strings.EqualFold("HELLO", "hello"),
+	)
 }
