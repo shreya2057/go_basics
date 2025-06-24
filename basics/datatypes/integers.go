@@ -1,8 +1,8 @@
-package integers
+package datatypes
 
 import (
 	"fmt"
-	"go_lang/utils/headers"
+	"go_lang/utils"
 )
 
 func Integer() {
@@ -18,7 +18,7 @@ func Integer() {
 	var uInteger32 uint32 = 1000000000
 	var uInteger64 uint64 = 10000000000000000000
 
-	headers.Heading("Integers", "")
+	utils.Heading("Integers", "")
 	fmt.Println("int(32 or 64 bits):", integer)
 	fmt.Println("int8(8-bit integer):", integer8)
 	fmt.Println("int16(16-bit integer):", integer16)
@@ -27,7 +27,7 @@ func Integer() {
 
 	fmt.Println()
 
-	headers.Heading("Unsigned Integer", "")
+	utils.Heading("Unsigned Integer", "")
 	fmt.Println("uint(32 or 64 bits):", uInteger)
 	fmt.Println("uint8(8-bit unsigned integer):", uInteger8)
 	fmt.Println("uint16(16-bit unsigned integer):", uInteger16)

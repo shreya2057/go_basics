@@ -1,8 +1,8 @@
-package stringsData
+package datatypes
 
 import (
 	"fmt"
-	"go_lang/utils/headers"
+	"go_lang/utils"
 	"strings"
 )
 
@@ -10,7 +10,7 @@ func String() {
 	var firstname string = "Alice"
 	var lastname string = "Wonderland"
 	var fullname = firstname + " " + lastname
-	headers.Heading("String", "")
+	utils.Heading("String", "")
 	fmt.Println("string:", firstname)
 	fmt.Println("string concatenation:", firstname+" "+lastname)
 	fmt.Println("string length:", len(firstname), len(lastname))
