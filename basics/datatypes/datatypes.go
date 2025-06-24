@@ -5,6 +5,7 @@ import (
 	complexNumber "go_lang/basics/datatypes/complex"
 	float "go_lang/basics/datatypes/floats"
 	"go_lang/basics/datatypes/integers"
+	stringsData "go_lang/basics/datatypes/strings"
 	"go_lang/utils/headers"
 )
 
@@ -20,4 +21,5 @@ func basicTypes() {
 	integers.Integer()
 	float.Float()
 	complexNumber.Complex()
+	stringsData.String()
 }
