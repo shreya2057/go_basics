@@ -12,10 +12,28 @@ func String() {
 	var fullname = firstname + " " + lastname
 	utils.Heading("String", "")
 	fmt.Println("string:", firstname)
-	fmt.Println("string concatenation:", firstname+" "+lastname)
-	fmt.Println("string length:", len(firstname), len(lastname))
-	fmt.Println("string Contains:", strings.Contains(fullname, "Alice"))
-	fmt.Println("string ContainsAny:", strings.ContainsAny(fullname, "lopicq"))
+
+	fmt.Println()
+
+	utils.Heading("String Methods", "")
+	utils.FormatOutput(
+		"Concatenation (+)",
+		fmt.Sprintf("Firstname: (%s) Lastname (%s)", firstname, lastname),
+		fullname,
+	)
+	utils.FormatOutput("Length (len())", firstname, len(firstname))
+
+	utils.FormatOutput(
+		"Contains (strings.Contains())",
+		fmt.Sprintf("String (%s) Substring (%s)", fullname, "Alice"),
+		strings.Contains(fullname, "Alice"),
+	)
+
+	utils.FormatOutput(
+		"ContainsAny (strings.ContainsAny())",
+		fmt.Sprintf("String (%s) Substring (%s)", fullname, "lopicq"),
+		strings.ContainsAny(fullname, "lopicq"),
+	)
 	fmt.Println("string HasPrefix:", strings.HasPrefix(fullname, "Al"))
 	fmt.Println("string HasSuffix:", strings.HasSuffix(fullname, "land"))
 	fmt.Println("string Index:", strings.Index("hello world world", "world"))
