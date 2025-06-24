@@ -5,5 +5,7 @@ import (
 )
 
 func main() {
+
+	// Datatypes
 	datatypes.DataTypes()
 }

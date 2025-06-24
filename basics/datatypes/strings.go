@@ -28,4 +28,13 @@ func String() {
 	fmt.Println("string Join:", strings.Join([]string{"pen", "pine"}, ","))
 	fmt.Println("string Replace:", strings.Replace("dark_strategy_user", "_", " ", 1))
 	fmt.Println("string ReplaceAll:", strings.ReplaceAll("dark_strategy_user", "_", " "))
+	fmt.Println("string Trim:", strings.Trim("_hello_", ",_"))
+	fmt.Println("string TrimSpace:", strings.TrimSpace(" hello\n"))
+	fmt.Println("string TrimPrefix:", strings.TrimPrefix("__hello_", "_"))
+	fmt.Println("string TrimSuffix:", strings.TrimSuffix("_hello__", "_"))
+	fmt.Println("string TrimLeft:", strings.TrimLeft("__hello_", "_"))
+	fmt.Println("string TrimRight:", strings.TrimRight("_hello__", "_"))
+	fmt.Println("string ToUpper:", strings.ToUpper("hello"))
+	fmt.Println("string ToLower:", strings.ToLower("HELLO"))
+	fmt.Println("string EqualFold:", strings.EqualFold("HELLO", "hello"))
 }
