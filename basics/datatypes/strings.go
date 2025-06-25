@@ -3,6 +3,8 @@ package datatypes
 import (
 	"fmt"
 	"go_lang/utils"
+	"reflect"
+	"strconv"
 	"strings"
 )
 
@@ -138,5 +140,32 @@ func String() {
 		"EqualFold (strings.EqualFold())",
 		`String1 ("HELLO") String2 ("hello")`,
 		strings.EqualFold("HELLO", "hello"),
+	)
+	utils.FormatOutput(
+		"strconv.Itoa()",
+		`Int (123)`,
+		reflect.TypeOf(strconv.Itoa(123)),
+	)
+	utils.FormatOutput(
+		"strconv.Atoi()",
+		`String ("123")`,
+		func() any {
+			i, err := strconv.Atoi("123")
+			if err != nil {
+				return fmt.Sprintf("Error: %v", err)
+			}
+			return i
+		}(),
+	)
+	utils.FormatOutput(
+		"strconv.ParseFloat()",
+		`String ("123.456")`,
+		func() any {
+			f, err := strconv.ParseFloat("123.456", 64)
+			if err != nil {
+				return fmt.Sprintf("Error: %v", err)
+			}
+			return f
+		}(),
 	)
 }
