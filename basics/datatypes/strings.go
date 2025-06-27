@@ -97,6 +97,11 @@ func String() {
 		strings.ReplaceAll("dark_strategy_user", "_", " "),
 	)
 	utils.FormatOutput(
+		"Repeat (strings.Repeat())",
+		`String ("s") Count (3)`,
+		strings.Repeat("s", 3),
+	)
+	utils.FormatOutput(
 		"Trim (strings.Trim())",
 		`String ("_hello_") Cutset (",_")`,
 		strings.Trim("_hello_", ",_"),
@@ -167,5 +172,10 @@ func String() {
 			}
 			return f
 		}(),
+	)
+	utils.FormatOutput(
+		"Repeat (strings.Repeat())",
+		`String ("s") Count (3)`,
+		strings.Repeat("sssssss", 3),
 	)
 }
