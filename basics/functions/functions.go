@@ -42,13 +42,15 @@ func funcWithNameReturnShadow() (return1 int) {
 	return
 }
 
-func Functions() {
+func functionCalls() {
 	utils.Heading("Functions", "1")
 	paramter1 := 20
 	paramter2 := 10
+
 	funcWithNoParameters()
 	add := functWithSameParameters(paramter1, paramter2)
 	utils.FormatOutput("Functions With same type paramters", fmt.Sprintf("paramter1: %d, parameter2: %d", paramter1, paramter2), fmt.Sprintf("result of function: %d", add))
+
 	quotient, err := functWithTwoReturns(paramter1, paramter2)
 	if err != "" {
 		utils.FormatOutput("Functions with two returns", fmt.Sprintf("parameter1: %d, parameter2: %d", paramter1, paramter2), fmt.Sprintf("error: %s", err))
@@ -61,4 +63,11 @@ func Functions() {
 
 	value = funcWithNameReturnShadow()
 	utils.FormatOutput("Functions with name return shadow", "No parameters", fmt.Sprintf("result: %d", value))
+}
+
+func Functions() {
+	functionCalls()
+	VariadicFunction()
+	Anonymous()
+	closureFunction()
 }
